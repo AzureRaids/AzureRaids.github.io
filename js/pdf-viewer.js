@@ -19,7 +19,7 @@ function renderPage(pdf, pageNumber) {
         let canvas = document.getElementById('canvas' + pageNumber);
 
         let scale = $(document).width() / (test_viewport.width + 2*PDF_BORDER);
-        scale = Math.max(Math.min(scale, 3), 0.5);
+        // scale = Math.max(Math.min(scale, 3), 0.5);
         let viewport = page.getViewport({
             scale: scale, offsetX: PDF_BORDER
         });
