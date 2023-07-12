@@ -35,7 +35,9 @@ function renderPage(pdf, pageNumber) {
         };
         let renderTask = page.render(renderContext);
         renderTask.promise.then(function () {
-            // console.log('Page rendered');
+            context.fillStyle = "black";
+            context.fillRect(0, 0, PDF_BORDER, viewport.height);
+            context.fillRect(PDF_BORDER, canvas.height-2, canvas.width, 2);
         });
     });
 }
