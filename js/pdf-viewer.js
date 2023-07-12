@@ -76,7 +76,8 @@ $("#canvas2").on("click", function(evt) {
     const rect_fields = [
         [309, 59, 427, 176, 'https://open.spotify.com/track/1dcJmzAh1ybNK3aNooEN4j'],
         [457, 59, 572, 176, 'https://open.spotify.com/track/2zW3oVxX9AEszSTWq6qDeL'],
-        [290, 662, 588, 834, 'https://www.youtube.com/watch?v=FE6Bf63v8WI'],
+        [290, 662, 588, 836, 'https://www.youtube.com/watch?v=FE6Bf63v8WI'],
+        [105, 523, 281, 836, 'https://youtu.be/3c-zJfkP6q0'],
     ]
     for (let [left, top, right, bot, url] of rect_fields) {
         if (xPos > left && xPos < right && yPos > top && yPos < bot) {
