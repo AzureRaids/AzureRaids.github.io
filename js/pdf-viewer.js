@@ -5,7 +5,7 @@ const url = 'https://raw.githubusercontent.com/AzureRaids/AzureRaids.github.io/m
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
 const PDF_BORDER = 10;
-const SCALE_FACTOR = 0.8;
+const SCALE_FACTOR = 0.4;
 
 // The workerSrc property shall be specified.
 pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
