@@ -5,6 +5,7 @@ const url = 'https://raw.githubusercontent.com/AzureRaids/AzureRaids.github.io/m
 // Loaded via <script> tag, create shortcut to access PDF.js exports.
 const pdfjsLib = window['pdfjs-dist/build/pdf'];
 const PDF_BORDER = 10;
+const SCALE_FACTOR = 0.8;
 
 // The workerSrc property shall be specified.
 pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.js';
@@ -18,7 +19,7 @@ function renderPage(pdf, pageNumber) {
         // Prepare canvas using PDF page dimensions
         let canvas = document.getElementById('canvas' + pageNumber);
 
-        let scale = $(document).width() / (test_viewport.width + 2*PDF_BORDER);
+        let scale = $(document).width() / (test_viewport.width + 2*PDF_BORDER) * SCALE_FACTOR;
         // scale = Math.max(Math.min(scale, 3), 0.5);
         let viewport = page.getViewport({
             scale: scale, offsetX: PDF_BORDER
