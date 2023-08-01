@@ -1,7 +1,43 @@
 canvas {
+}
+
+body {
+    /* Set background image */
+    background-image: url('images/Background.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.canvas-container {
+    position: relative; /* Set this to make sure the canvas and text stay within this container */
+    max-width: 800px; /* Adjust this to your canvas width */
+    margin: 0 auto; /* Center the canvas container horizontally */
+}
+
+canvas {
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     display: block;
+
+    /* Your canvas styles go here */
+    width: 100%; /* Make the canvas fill its container */
+}
+
+.fixed-text {
+    /* Styles for the fixed text */
+    position: fixed;
+    top: 95%; /* Adjust this to position the text vertically */
+    right: 20px; /* Adjust this to position the text horizontally from the right */
+    transform: translateY(-50%); /* Center the text vertically */
+    /* background-color: white; /* Just for better visibility of the text */
+    padding: 10px;
+    color: #cccccc; /* Adjust this color to your preference */
+}
+.fixed-text a {
+    /* Styles for the text inside the <a> element */
+    color: #cccccc; /* Adjust this color to your preference */
 }
